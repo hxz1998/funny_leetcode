@@ -426,4 +426,5 @@ __pycache__/
 
 CMakeFiles/
 cmake-build-debug/
+.vscode/
 
