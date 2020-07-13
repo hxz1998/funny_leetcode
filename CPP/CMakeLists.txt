@@ -8,3 +8,8 @@ add_executable(No1 No1.cpp)
 add_executable(No2 No2.cpp)
 add_executable(No7 No7.cpp)
 add_executable(No9 No9.cpp)
+
+add_executable(No29 No29.cpp)
+add_executable(No31 No31.cpp)
+add_executable(No32 No32.cpp)
+add_executable(No33 No33.cpp)
