@@ -20,3 +20,9 @@ add_executable(No36 No36.cpp)
 
 add_executable(No37 No37.cpp)
 add_executable(No38 No38.cpp)
+
+add_executable(No39 No39.cpp)
+add_executable(No40 No40.cpp)
+add_executable(No41 No41.cpp)
+add_executable(No42 No42.cpp)
+add_executable(No43 No43.cpp)
