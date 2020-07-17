@@ -9,6 +9,13 @@ add_executable(No2 No2.cpp)
 add_executable(No7 No7.cpp)
 add_executable(No9 No9.cpp)
 
+add_executable(No23 No23.cpp)
+add_executable(No24 No24.cpp)
+add_executable(No25 No25.cpp)
+add_executable(No26 No26.cpp)
+add_executable(No27 No27.cpp)
+add_executable(No28 No28.cpp)
+
 add_executable(No29 No29.cpp)
 add_executable(No31 No31.cpp)
 add_executable(No32 No32.cpp)
