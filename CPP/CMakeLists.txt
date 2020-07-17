@@ -26,3 +26,7 @@ add_executable(No40 No40.cpp)
 add_executable(No41 No41.cpp)
 add_executable(No42 No42.cpp)
 add_executable(No43 No43.cpp)
+
+add_executable(No44 No44.cpp)
+add_executable(No45 No45.cpp)
+add_executable(No46 No46.cpp)
