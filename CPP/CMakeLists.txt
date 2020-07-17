@@ -30,3 +30,6 @@ add_executable(No43 No43.cpp)
 add_executable(No44 No44.cpp)
 add_executable(No45 No45.cpp)
 add_executable(No46 No46.cpp)
+
+add_executable(No47 No47.cpp)
+add_executable(No48 No48.cpp)
