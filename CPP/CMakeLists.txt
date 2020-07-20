@@ -40,3 +40,10 @@ add_executable(No46 No46.cpp)
 
 add_executable(No47 No47.cpp)
 add_executable(No48 No48.cpp)
+
+add_executable(weekly-contest-198-No1 weekly-contest-198/No1.cpp)
+
+add_executable(No49 No49.cpp)
+add_executable(No50 No50.cpp)
+add_executable(No53 No53.cpp)
+add_executable(No54 No54.cpp)
