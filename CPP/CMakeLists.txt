@@ -72,4 +72,6 @@ add_executable(No72 No72.cpp)
 add_executable(No73 No73.cpp)
 add_executable(No74 No74.cpp)
 add_executable(No75 No75.cpp)
-
+add_executable(No76 No76.cpp)
+add_executable(No77 No77.cpp)
+add_executable(No78 No78.cpp)
