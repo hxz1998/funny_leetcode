@@ -2,7 +2,7 @@
  * Created by Xiaozhong on 2020/8/1.
  * Copyright (c) 2020/8/1 Xiaozhong. All rights reserved.
  */
-#include "simple_tree_node.h"
+#include "simple_node.h"
 #include <iostream>
 
 using namespace std;

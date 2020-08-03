@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <queue>
-#include "simple_tree_node.h"
+#include "simple_node.h"
 #include <vector>
 
 using namespace std;

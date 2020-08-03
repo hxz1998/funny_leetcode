@@ -2,7 +2,7 @@
  * Created by Xiaozhong on 2020/7/31.
  * Copyright (c) 2020/7/31 Xiaozhong. All rights reserved.
  */
-#include "simple_tree_node.h"
+#include "simple_node.h"
 
 /*
  * Wow!!~~ \@.@/? 懵懵的，一百道了，七月的最后一天~老婆陪着俺一起刷到了 100 题 --<<@ 花花送老婆

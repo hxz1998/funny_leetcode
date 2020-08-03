@@ -5,7 +5,7 @@
 
 #include "iostream"
 #include "vector"
-#include "simple_tree_node.h"
+#include "simple_node.h"
 #include "unordered_map"
 
 using namespace std;

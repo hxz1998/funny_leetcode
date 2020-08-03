@@ -4,7 +4,7 @@
  */
 
 #include <iostream>
-#include "simple_tree_node.h"
+#include "simple_node.h"
 
 using namespace std;
 

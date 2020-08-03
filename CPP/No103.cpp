@@ -4,7 +4,7 @@
  */
 
 #include <vector>
-#include "simple_tree_node.h"
+#include "simple_node.h"
 #include <queue>
 
 using namespace std;

@@ -2,7 +2,7 @@
  * Created by Xiaozhong on 2020/8/3.
  * Copyright (c) 2020/8/3 Xiaozhong. All rights reserved.
  */
-#include "simple_tree_node.h"
+#include "simple_node.h"
 #include "vector"
 #include "iostream"
 #include "unordered_map"
