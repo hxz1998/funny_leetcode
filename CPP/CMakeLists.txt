@@ -111,3 +111,6 @@ add_executable(No109 No109.cpp)
 add_executable(No110 No110.cpp)
 add_executable(No111 No111.cpp)
 add_executable(No112 No112.cpp)
+
+add_executable(No113 No113.cpp)
+add_executable(No114 No114.cpp)
