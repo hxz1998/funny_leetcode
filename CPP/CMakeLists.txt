@@ -180,3 +180,7 @@ add_executable(No173 No173.cpp)
 add_executable(No174 No174.cpp)
 add_executable(No179 No179.cpp)
 add_executable(No187 No187.cpp)
+
+add_executable(No188 No188.cpp)
+add_executable(No189 No189.cpp)
+add_executable(No190 No190.cpp)
