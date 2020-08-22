@@ -218,3 +218,8 @@ add_executable(No225 No225.cpp)
 add_executable(No226 No226.cpp)
 add_executable(No227 No227.cpp)
 add_executable(No228 No228.cpp libs.h)
+
+add_executable(biweekly-contest-33-No1 biweekly-contest-33/No1.cpp)
+add_executable(biweekly-contest-33-No2 biweekly-contest-33/No2.cpp)
+add_executable(biweekly-contest-33-No3 biweekly-contest-33/No3.cpp)
+add_executable(biweekly-contest-33-No4 biweekly-contest-33/No4.cpp)
