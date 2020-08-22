@@ -206,3 +206,7 @@ add_executable(No214 No214.cpp)
 add_executable(No215 No215.cpp)
 add_executable(No216 No216.cpp)
 add_executable(No217 No217.cpp)
+
+add_executable(No218 No218.cpp)
+add_executable(No219 No219.cpp)
+add_executable(No220 No220.cpp)
