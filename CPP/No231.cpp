@@ -1,0 +1,18 @@
+/**
+ * Created by Xiaozhong on 2020/8/23.
+ * Copyright (c) 2020/8/23 Xiaozhong. All rights reserved.
+ */
+#include "iostream"
+
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        if (n == 0) return false;
+        while (n != 0) {
+            if (n == 1) return true;
+            if (n % 2 != 0) return false;
+            n /= 2;
+        }
+        return true;
+    }
+};
