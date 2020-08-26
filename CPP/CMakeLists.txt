@@ -261,3 +261,8 @@ add_executable(No295 No295.cpp)
 add_executable(No297 No297.cpp)
 add_executable(No299 No299.cpp)
 add_executable(No300 No300.cpp)
+
+add_executable(No303 No303.cpp)
+add_executable(No304 No304.cpp)
+add_executable(No307 No307.cpp)
+add_executable(No309 No309.cpp)
