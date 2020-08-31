@@ -300,3 +300,12 @@ add_executable(No354 No354.cpp)
 
 add_executable(weekly-contest-204-No1 weekly-contest-204/No1.cpp)
 add_executable(weekly-contest-204-No2 weekly-contest-204/No2.cpp)
+
+add_executable(No355 No355.cpp)
+add_executable(No357 No357.cpp)
+add_executable(No367 No367.cpp)
+add_executable(No368 No368.cpp)
+add_executable(No371 No371.cpp)
+add_executable(No372 No372.cpp)
+add_executable(No374 No374.cpp)
+add_executable(No375 No375.cpp)

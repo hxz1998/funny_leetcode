@@ -10,16 +10,19 @@ using namespace std;
 class Solution {
 public:
     bool containsPattern(vector<int> &arr, int m, int k) {
-        for (int i = 0; i < arr.size() - m; i++) {
-            int count = 0;
-            int j = i;
-            for (int n = 0; n <= k; n++) {
-                if (arr[j] == arr[m + j]) {
-                    j++;
-                    if (++count >= k) return true;
-                    if (j - i >= m) continue;
-                } else break;
+        /**
+         * 这道题直接暴力遍历就好了，因为题目中说了 arr.length < 100，不算特别大
+         * 弄一个宽度为 m 的窗进行遍历
+         */
+        int n = arr.size();
+        if (n < m * k) return false;
+        for (int i = 0; i <= n - m * k; i++) {
+            int j = i + m;
+            for (; j < i + m * k; j++) {
+                // 判断当前元素和前面的元素是否相同，如果不同则开始检查下一个起始位置
+                if (arr[j] != arr[j - m]) break;
             }
+            if (j == i + m * k) return true;
         }
         return false;
     }

@@ -15,28 +15,28 @@ using namespace std;
 class Solution {
 public:
     int getMaxLen(vector<int> &nums) {
+        /**
+         * dp[i][0] : 以 nums[i] 结尾，乘积为 正 的最长子数组长度
+         * dp[i][1] : 以 nums[i] 结尾，乘积为 负 的最长子数组长度
+         */
+        int dp[nums.size() + 1][2];
+        dp[0][0] = dp[0][1] = 0;
         int ans = 0;
-        // 时间会超限，因为复杂度为 N ^ 2
-        /*bool multi_num = true;
-        int counter = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            counter = 0;
-            multi_num = true;
-            for (int j = i; j < nums.size(); ++j) {
-                counter++;
-                if (nums[j] < 0) multi_num = !multi_num;
-                if (nums[j] == 0) break;
-                if (multi_num) ans = max(ans, counter);
+        for (int i = 1; i <= nums.size(); i++) {
+            if (nums[i - 1] == 0) {
+                // 当 nums[i] == 0 时，两者均无法达到要求，所以为 0
+                dp[i][0] = dp[i][1] = 0;
+            } else if (nums[i - 1] > 0) {
+                // 当 nums[i] > 0 时，正数只需要自己 + 1
+                dp[i][0] = dp[i - 1][0] + 1;
+                // 负数要看前面是否为 0 ，如果为 0， 那么自己一个 正数 是无法构成乘积为 负 的序列的，所以直接给 0
+                dp[i][1] = dp[i - 1][1] ? dp[i - 1][1] + 1 : 0;
+            } else {
+                // 理由同上
+                dp[i][0] = dp[i - 1][1] ? dp[i - 1][1] + 1 : 0;
+                dp[i][1] = dp[i - 1][0] + 1;
             }
-        }*/
-
-        bool positive = true;
-        int counter = 0;
-        for (int i = 0; i < nums.size(); ++i) {
-            counter++;
-            if (nums[i] == 0) counter = 0;
-            else if (nums[i] < 0) positive = !positive;
-            if (positive) ans = max(ans, counter);
+            ans = max(ans, dp[i][0]);
         }
         return ans;
     }
