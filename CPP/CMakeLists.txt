@@ -313,3 +313,7 @@ add_executable(No375 No375.cpp)
 add_executable(No376 No376.cpp)
 add_executable(No377 No377.cpp)
 add_executable(No378 No378.cpp)
+
+add_executable(No380 No380.cpp)
+add_executable(No381 No381.cpp)
+add_executable(No382 No382.cpp)
