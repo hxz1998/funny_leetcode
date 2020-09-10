@@ -321,3 +321,11 @@ add_executable(No382 No382.cpp)
 add_executable(No383 No383.cpp)
 add_executable(No384 No384.cpp)
 add_executable(No385 No385.cpp)
+
+add_executable(No386 No386.cpp)
+add_executable(No387 No387.cpp)
+add_executable(No389 No389.cpp)
+
+add_executable(No390 No390.cpp)
+add_executable(No391 No391.cpp)
+add_executable(No392 No392.cpp)
