@@ -329,3 +329,7 @@ add_executable(No389 No389.cpp)
 add_executable(No390 No390.cpp)
 add_executable(No391 No391.cpp)
 add_executable(No392 No392.cpp)
+
+add_executable(No393 No393.cpp)
+add_executable(No394 No394.cpp)
+add_executable(No395 No395.cpp)
