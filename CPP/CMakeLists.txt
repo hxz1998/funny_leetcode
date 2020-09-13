@@ -333,3 +333,13 @@ add_executable(No392 No392.cpp)
 add_executable(No393 No393.cpp)
 add_executable(No394 No394.cpp)
 add_executable(No395 No395.cpp)
+
+add_executable(No396 No396.cpp)
+add_executable(lccup20-No1 lccup20/No1.cpp)
+add_executable(lccup20-No2 lccup20/No2.cpp)
+add_executable(lccup20-No3 lccup20/No3.cpp)
+
+add_executable(No397 No397.cpp)
+add_executable(No398 No398.cpp)
+add_executable(No400 No400.cpp)
+add_executable(weekly-contest-206-No1 weekly-contest-206/No1.cpp)
