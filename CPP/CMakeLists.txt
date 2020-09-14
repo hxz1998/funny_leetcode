@@ -343,3 +343,8 @@ add_executable(No397 No397.cpp)
 add_executable(No398 No398.cpp)
 add_executable(No400 No400.cpp)
 add_executable(weekly-contest-206-No1 weekly-contest-206/No1.cpp)
+
+add_executable(No401 No401.cpp)
+add_executable(No402 No402.cpp)
+add_executable(No403 No403.cpp)
+add_executable(No404 No404.cpp)
