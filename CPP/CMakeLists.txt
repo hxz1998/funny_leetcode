@@ -364,3 +364,8 @@ add_executable(No419 No419.cpp)
 add_executable(No421 No421.cpp)
 add_executable(No423 No423.cpp)
 add_executable(No424 No424.cpp)
+
+add_executable(No429 No429.cpp)
+add_executable(2020-fall-No1 2020-fall/No1.cpp)
+add_executable(No430 No430.cpp)
+add_executable(No433 No433.cpp)
