@@ -374,3 +374,7 @@ add_executable(weekly-contest-207-No1 weekly-contest-207/No1.cpp)
 add_executable(No434 No434.cpp)
 add_executable(No435 No435.cpp)
 add_executable(No437 No437.cpp)
+
+add_executable(No438 No438.cpp)
+add_executable(No440 No440.cpp)
+add_executable(No441 No441.cpp)
