@@ -378,3 +378,7 @@ add_executable(No437 No437.cpp)
 add_executable(No438 No438.cpp)
 add_executable(No440 No440.cpp)
 add_executable(No441 No441.cpp)
+
+add_executable(No442 No442.cpp)
+add_executable(No443 No443.cpp)
+add_executable(No445 No445.cpp)
