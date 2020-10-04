@@ -426,3 +426,11 @@ add_executable(No491 No491.cpp)
 add_executable(No492 No492.cpp)
 add_executable(No494 No494.cpp)
 add_executable(No495 No495.cpp)
+
+add_executable(No496 No496.cpp)
+add_executable(No497 No497.cpp)
+add_executable(No498 No498.cpp)
+
+add_executable(biweekly-contest-36-No1 biweekly-contest-36/No1.cpp)
+add_executable(weekly-contest-209-No1 weekly-contest-209/No1.cpp)
+add_executable(weekly-contest-209-No2 weekly-contest-209/No2.cpp)
