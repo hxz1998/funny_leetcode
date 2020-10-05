@@ -435,3 +435,8 @@ add_executable(biweekly-contest-36-No1 biweekly-contest-36/No1.cpp)
 add_executable(weekly-contest-209-No1 weekly-contest-209/No1.cpp)
 add_executable(weekly-contest-209-No2 weekly-contest-209/No2.cpp)
 add_executable(No500 No500.cpp)
+
+add_executable(No501 No501.cpp)
+add_executable(No502 No502.cpp)
+add_executable(No503 No503.cpp)
+add_executable(No504 No504.cpp)
