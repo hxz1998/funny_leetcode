@@ -440,3 +440,7 @@ add_executable(No501 No501.cpp)
 add_executable(No502 No502.cpp)
 add_executable(No503 No503.cpp)
 add_executable(No504 No504.cpp)
+
+add_executable(No506 No506.cpp)
+add_executable(No507 No507.cpp)
+add_executable(No508 No508.cpp)
