@@ -25,3 +25,7 @@ public:
         return ans.size();
     }
 };
+
+int main() {
+    Solution s;
+}

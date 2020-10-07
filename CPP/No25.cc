@@ -60,3 +60,7 @@ public:
         return hair->next;
     }
 };
+
+int main() {
+    Solution s;
+}
