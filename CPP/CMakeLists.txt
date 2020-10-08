@@ -444,3 +444,7 @@ add_executable(No504 No504.cc)
 add_executable(No506 No506.cc)
 add_executable(No507 No507.cc)
 add_executable(No508 No508.cc)
+
+add_executable(No509 No509.cc)
+add_executable(No513 No513.cc)
+add_executable(No515 No515.cc)
