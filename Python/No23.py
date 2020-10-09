@@ -15,6 +15,5 @@ class Solution:
             while node:
                 stack.append(node.val)
                 node = node.next
-        result = tem =
         pass
 
