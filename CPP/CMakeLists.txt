@@ -452,3 +452,15 @@ add_executable(No515 No515.cc)
 add_executable(No516 No516.cc)
 add_executable(No517 No517.cc)
 add_executable(No519 No519.cc)
+
+add_executable(No520 No520.cc)
+add_executable(No521 No521.cc)
+add_executable(No522 No522.cc)
+
+add_executable(No523 No523.cc)
+add_executable(No524 No524.cc)
+add_executable(No525 No525.cc)
+
+add_executable(weekly-contest-210-No1 weekly-contest-210/No1.cc)
+add_executable(weekly-contest-210-No2 weekly-contest-210/No2.cc)
+add_executable(weekly-contest-210-No3 weekly-contest-210/No3.cc)
