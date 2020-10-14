@@ -464,3 +464,13 @@ add_executable(No525 No525.cc)
 add_executable(weekly-contest-210-No1 weekly-contest-210/No1.cc)
 add_executable(weekly-contest-210-No2 weekly-contest-210/No2.cc)
 add_executable(weekly-contest-210-No3 weekly-contest-210/No3.cc)
+
+add_executable(No530 No530.cc)
+add_executable(No526 No526.cc)
+
+add_executable(No532 No532.cc)
+add_executable(No535 No535.cc)
+add_executable(No537 No537.cc)
+
+add_executable(No539 No539.cc)
+add_executable(No540 No540.cc)
