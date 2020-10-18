@@ -492,3 +492,6 @@ add_executable(No559 No559.cc)
 add_executable(No560 No560.cc)
 add_executable(weekly-contest-211-No1 weekly-contest-211/No1.cc)
 add_executable(weekly-contest-211-No2 weekly-contest-211/No2.cc)
+
+add_executable(No561 No561.cc)
+add_executable(No563 No563.cc)
