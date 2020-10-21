@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 project(cc)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 20)
+
+# 该目录下文件为阅读 《算法竞赛入门经典（第二版）》 所产生文件
+add_subdirectory(acm-intro/)
 
 add_executable(cc main.cc complex_node.hh)
 add_executable(No1 No1.cc)
@@ -495,3 +498,10 @@ add_executable(weekly-contest-211-No2 weekly-contest-211/No2.cc)
 
 add_executable(No561 No561.cc)
 add_executable(No563 No563.cc)
+
+add_executable(No565 No565.cc)
+add_executable(No566 No566.cc)
+add_executable(No567 No567.cc)
+
+add_executable(No572 No572.cc)
+add_executable(No575 No575.cc)
