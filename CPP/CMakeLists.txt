@@ -505,3 +505,6 @@ add_executable(No567 No567.cc)
 
 add_executable(No572 No572.cc)
 add_executable(No575 No575.cc)
+
+add_executable(No581 No581.cc)
+add_executable(No589 No589.cc)
