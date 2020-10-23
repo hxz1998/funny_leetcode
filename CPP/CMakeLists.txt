@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(cc)
+project(funny-leetcode)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -508,3 +508,7 @@ add_executable(No575 No575.cc)
 
 add_executable(No581 No581.cc)
 add_executable(No589 No589.cc)
+
+add_executable(No590 No590.cc)
+add_executable(No592 No592.cc)
+add_executable(No593 No593.cc)
