@@ -6,6 +6,10 @@ set(CMAKE_CXX_STANDARD 20)
 # 该目录下文件为阅读 《算法竞赛入门经典（第二版）》 所产生文件
 add_subdirectory(acm-intro/)
 
+# 该目录下文件为《程序员面试金典》涉及程序
+add_subdirectory(interview-book/)
+
+
 add_executable(cc main.cc complex_node.hh)
 add_executable(No1 No1.cc)
 add_executable(No2 No2.cc)
@@ -516,3 +520,6 @@ add_executable(No593 No593.cc)
 add_executable(No1024 No1024.cc)
 add_executable(No594 No594.cc)
 add_executable(No598 No598.cc)
+
+add_executable(No599 No599.cc)
+add_executable(No845 No845.cc)
