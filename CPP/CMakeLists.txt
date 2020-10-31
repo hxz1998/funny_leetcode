@@ -544,3 +544,7 @@ add_executable(No611 No611.cc)
 add_executable(No621 No621.cc)
 add_executable(No630 No630.cc)
 add_executable(No633 No633.cc)
+
+add_executable(No636 No636.cc)
+add_executable(No638 No638.cc)
+add_executable(No639 No639.cc)
