@@ -558,3 +558,8 @@ add_executable(weekly-contest-213-No2 weekly-contest-213/No2.cc)
 
 add_executable(No643 No643.cc)
 add_executable(No645 No645.cc)
+
+add_executable(No941 No941.cc)
+add_executable(No646 No646.cc)
+add_executable(No647 No647.cc)
+add_executable(No648 No648.cc)
