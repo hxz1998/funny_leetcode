@@ -10,6 +10,21 @@ using namespace std;
 class Solution {
 public:
     int rob(vector<int> &nums) {
+        vector<int> dp(nums.size());
+        for (int i = 1; i < nums.size(); ++i) {
+        }
+    }
+};
+
+int main() {
+    Solution s;
+    vector<int> nums = {1, 2, 3, 1};
+    cout << s.rob(nums) << endl;
+}
+
+class Solution_Old_Version {
+public:
+    int rob(vector<int> &nums) {
         if (nums.empty()) return 0;
         if (nums.size() == 1) return nums[0];
         int size = nums.size();
@@ -20,9 +35,3 @@ public:
         return dp[size - 1];
     }
 };
-
-int main() {
-    Solution s;
-    vector<int> nums = {1, 2, 3, 1};
-    cout << s.rob(nums) << endl;
-}
