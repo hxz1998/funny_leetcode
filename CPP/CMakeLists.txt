@@ -603,3 +603,13 @@ add_executable(No678 No678.cc)
 add_executable(No1122 No1122.cc)
 add_executable(No680 No680.cc)
 add_executable(No682 No682.cc)
+add_executable(biweekly-contest-39-No1 biweekly-contest-39/No1.cc)
+add_executable(biweekly-contest-39-No2 biweekly-contest-39/No2.cc)
+add_executable(weekly-contest-215-No1 weekly-contest-215/No1.cc)
+add_executable(weekly-contest-215-No2 weekly-contest-215/No2.cc)
+
+add_executable(No684 No684.cc)
+add_executable(NO686 No686.cc)
+add_executable(No687 No687.cc)
+
+add_executable(No1030 No1030.cc)
