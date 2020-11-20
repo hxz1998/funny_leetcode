@@ -619,3 +619,11 @@ add_executable(No690 No690.cc)
 add_executable(No693 No693.cc)
 add_executable(No692 No692.cc)
 add_executable(No695 No695.cc)
+
+add_executable(No696 No696.cc)
+add_executable(No697 No697.cc)
+add_executable(No700 No700.cc)
+
+add_executable(No703 No703.cc)
+add_executable(No704 No704.cc)
+add_executable(No707 No707.cc)
