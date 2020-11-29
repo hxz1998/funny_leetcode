@@ -653,3 +653,13 @@ add_executable(No729 No729.cc)
 add_executable(No731 No731.cc)
 add_executable(No744 No744.cc)
 add_executable(No732 No732.cc)
+
+add_executable(No735 No735.cc)
+add_executable(No746 No746.cc)
+add_executable(biweekly-contest-40-No1 biweekly-contest-40/No1.cc)
+add_executable(biweekly-contest-40-No2 biweekly-contest-40/No2.cc)
+
+add_executable(weekly-contest-217-No1 weekly-contest-217/No1.cc)
+add_executable(weekly-contest-217-No2 weekly-contest-217/No2.cc)
+add_executable(No976 No976.cc)
+add_executable(No738 No738.cc)
