@@ -663,3 +663,6 @@ add_executable(weekly-contest-217-No1 weekly-contest-217/No1.cc)
 add_executable(weekly-contest-217-No2 weekly-contest-217/No2.cc)
 add_executable(No976 No976.cc)
 add_executable(No738 No738.cc)
+
+add_executable(No767 No767.cc)
+add_executable(No747 No747.cc)
