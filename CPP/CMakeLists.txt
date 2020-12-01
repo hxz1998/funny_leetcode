@@ -666,3 +666,7 @@ add_executable(No738 No738.cc)
 
 add_executable(No767 No767.cc)
 add_executable(No747 No747.cc)
+
+add_executable(No748 No748.cc)
+add_executable(No739 No739.cc)
+add_executable(No740 No740.cc)
