@@ -695,3 +695,7 @@ add_executable(weekly-contest-218-No4 weekly-contest-218/No4.cc)
 add_executable(No804 No804.cc)
 add_executable(No861 No861.cc)
 add_executable(No775 No775.cc)
+
+add_executable(No842 No842.cc)
+add_executable(No769 No769.cc)
+add_executable(No777 No777.cc)
