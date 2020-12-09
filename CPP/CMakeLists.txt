@@ -699,3 +699,8 @@ add_executable(No775 No775.cc)
 add_executable(No842 No842.cc)
 add_executable(No769 No769.cc)
 add_executable(No777 No777.cc)
+
+add_executable(No806 No806.cc)
+add_executable(No778 No778.cc)
+add_executable(No779 No779.cc)
+add_executable(No781 No781.cc)
