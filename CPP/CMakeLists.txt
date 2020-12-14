@@ -722,3 +722,7 @@ add_executable(biweekly-contest-41-No2 biweekly-contest-41/No2.cc)
 add_executable(weekly-contest-219-No1 weekly-contest-219/No1.cc)
 add_executable(weekly-contest-219-No2 weekly-contest-219/No2.cc)
 add_executable(weekly-contest-219-No3 weekly-contest-219/No3.cc)
+
+add_executable(No824 No824.cc)
+add_executable(No787 No787.cc)
+add_executable(No789 No789.cc)

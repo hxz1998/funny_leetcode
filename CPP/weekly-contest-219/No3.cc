@@ -8,24 +8,24 @@
 using namespace std;
 
 class Solution {
-private:
-    void helper(vector<int> &stones, int left, int right, int &alice, int &bob, int sum) {
-        if (left >= right) return;
-        if (stones[left] < stones[right]) {
-            alice += (sum -= stones[left++]);
-        } else {
-            alice += (sum -= stones[right--]);
-        }
-
-    }
-
 public:
     int stoneGameVII(vector<int> &stones) {
-        int sum = 0;
-        for (auto i : stones) sum += i;
-        int alice = 0, bob = 0, left = 0, right = stones.size() - 1;
-        helper(stones, left, right, alice, bob, sum);
-        return alice - bob;
+        int n = stones.size();
+        vector<vector<int>> dp(n, vector<int>(n, 0));
+        for (int i = 0; i < n; ++i) {
+            for (int j = i; j < n; ++j) {
+                if (i == j) dp[i][j] = stones[i];
+                else dp[i][j] = dp[i][j - 1] + stones[j];
+            }
+        }
+        vector<vector<int>> res(n, vector<int>(n, 0));
+        for (int i = n - 1; i >= 0; --i) {
+            for (int j = i + 1; j < n; ++j) {
+                if (j - i == 1) res[i][j] = max(stones[i], stones[j]);
+                else res[i][j] = max(dp[i + 1][j] - res[i + 1][j], dp[i][j - 1] - res[i][j - 1]);
+            }
+        }
+        return res[0][n - 1];
     }
 };
 
