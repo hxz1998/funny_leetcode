@@ -9,6 +9,9 @@ add_subdirectory(acm-intro/)
 # 该目录下文件为《程序员面试金典》涉及程序
 add_subdirectory(interview-book/)
 
+# 该目录下为《程序员的算法趣题》程序
+add_subdirectory(interesting-problems/)
+
 
 add_executable(cc main.cc complex_node.hh)
 add_executable(No1 No1.cc)
@@ -759,3 +762,23 @@ add_executable(No876 No876.cc)
 add_executable(No883 No883.cc)
 add_executable(No884 No884.cc)
 add_executable(No888 No888.cc)
+
+add_executable(No802 No802.cc)
+add_executable(No807 No807.cc)
+add_executable(No893 No893.cc)
+
+add_executable(No808 No808.cc)
+add_executable(No896 No896.cc)
+add_executable(biweekly-contest-42-No1 biweekly-contest-42/No1.cc)
+add_executable(weekly-contest-221-No1 weekly-contest-221/No1.cc)
+add_executable(weekly-contest-221-No2 weekly-contest-221/No2.cc)
+add_executable(weekly-contest-221-No3 weekly-contest-221/No3.cc)
+
+add_executable(No1046 No1046.cc)
+add_executable(No813 No813.cc)
+add_executable(No814 No814.cc)
+
+add_executable(No897 No897.cc)
+add_executable(No929 No929.cc)
+add_executable(No905 No905.cc)
+add_executable(No908 No908.cc)
