@@ -3,7 +3,7 @@
  * Copyright (c) 2021/1/25 Xiaozhong. All rights reserved.
  */
 
-class No959 {
+public class No959 {
     private class UnionFind {
         private int[] parent;
         private int count;
