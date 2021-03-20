@@ -8,53 +8,16 @@ package weeklyContest232;
 import java.util.ArrayList;
 
 public class No4 {
-    static class Pair {
-        int value, index;
-
-        Pair(int value, int index) {
-            this.value = value;
-            this.index = index;
-        }
-    }
-
     public int maximumScore(int[] nums, int k) {
-        int size = nums.length;
-        int[] minArray = new int[size];
-        int min = Integer.MAX_VALUE;
-        for (int i = k; i < size; ++i) {
-            if (nums[i] < min) min = nums[i];
-            minArray[i] = min;
-        }
-        min = Integer.MAX_VALUE;
-        for (int i = k - 1; i >= 0; --i) {
-            if (nums[i] < min) min = nums[i];
-            minArray[i] = min;
-        }
-        ArrayList<Pair> left = new ArrayList<>();
-        left.add(new Pair(minArray[0], 0));
-        for (int i = 1; i < k; ++i)
-            if (left.get(left.size() - 1).value != minArray[i]) left.add(new Pair(minArray[i], i));
-
-        ArrayList<Pair> right = new ArrayList<>();
-        right.add(new Pair(nums[k], k));
-        for (int i = k + 1; i < size; ++i)
-            if (right.get(right.size() - 1).value != minArray[i]) right.add(new Pair(minArray[i], i));
-            else right.get(right.size() - 1).index = i;
-        int ans = 0;
-        for (int i = 0; i < right.size(); ++i) {
-            for (int j = left.size() - 1; j >= 0; --j) {
-                int tmp = Math.min(left.get(j).value, right.get(i).value) * (right.get(i).index - left.get(j).index + 1);
-                if (tmp >= ans) ans = tmp;
-                else break;
-            }
-        }
-        for (int i = 0; i < right.size(); ++i) {
-            int tmp = Math.min(right.get(i).value, nums[k]) * (right.get(i).index - k + 1);
-            ans = Math.max(ans, tmp);
-        }
-        for (int j = left.size() - 1; j >= 0; --j) {
-            int tmp = Math.min(left.get(j).value, nums[k]) * (k - left.get(j).index + 1);
-            ans = Math.max(ans, tmp);
+        int left = k, right = k, size = nums.length, ans = 0;
+        while (true) {
+            while (left >= 0 && nums[left] >= nums[k]) left--;
+            while (right < size && nums[right] >= nums[k]) right++;
+            ans = Math.max(ans, (right - left - 1) * nums[k]);
+            if (left < 0 && right == size) break;
+            if (left >= 0 && right < size) nums[k] = Math.max(nums[left], nums[right]);
+            else if (left < 0) nums[k] = nums[right];
+            else nums[k] = nums[left];
         }
         return ans;
     }
