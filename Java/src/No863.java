@@ -5,15 +5,6 @@
 
 import java.util.*;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
 
 public class No863 {
     HashMap<TreeNode, TreeNode> parent;
@@ -65,6 +56,16 @@ public class No863 {
             parent.put(node, par);
             dfs(node.left, node);
             dfs(node.right, node);
+        }
+    }
+
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
         }
     }
 }
