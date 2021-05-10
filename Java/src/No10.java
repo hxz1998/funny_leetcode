@@ -8,7 +8,6 @@ class No10 {
         } else {
             return first_match && isMatch(s.substring(1), p.substring(1));
         }
-
     }
 
     public static void main(String[] args) {
