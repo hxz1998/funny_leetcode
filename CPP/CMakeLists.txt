@@ -784,3 +784,6 @@ add_executable(No905 No905.cc)
 add_executable(No908 No908.cc)
 
 add_executable(No914 No914.cc)
+
+add_executable(lccup2021-No1 lccup2021/No1.cc)
+add_executable(lccup2021-No3 lccup2021/No3.cc)

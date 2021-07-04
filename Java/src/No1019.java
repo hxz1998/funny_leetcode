@@ -6,16 +6,18 @@ import java.util.Stack;
  * Copyright (c) 2021, HuXiaozhong. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  */
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode(int x) {
-        val = x;
-    }
-}
 
 public class No1019 {
+    static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
     public int[] nextLargerNodes(ListNode head) {
         Stack<Integer> stack = new Stack<>();
         List<Integer> list = new ArrayList<>();
