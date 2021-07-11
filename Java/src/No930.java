@@ -8,7 +8,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class No930 {
-    public int numSubarraysWithSum(int[] A, int S) {
+
+    /*public int numSubarraysWithSum(int[] A, int S) {
         int size = A.length;
         int prefix = 0, ans = 0;
         Map<Integer, Integer> mapper = new TreeMap<>();
@@ -22,6 +23,7 @@ public class No930 {
         }
         return ans;
     }
+*/
     /*public int numSubarraysWithSum(int[] A, int S) {
         int size = A.length;
         int[] prefix = new int[size + 1];
@@ -37,6 +39,20 @@ public class No930 {
         }
         return ans;
     }*/
+
+    // 2021年7月8日再来做一遍
+    public int numSubarraysWithSum(int[] nums, int goal) {
+        int n = nums.length;
+        int[] prefix = new int[n + 1];
+        for (int i = 1; i <= n; ++i) prefix[i] = prefix[i - 1] + nums[i - 1];
+        Map<Integer, Integer> cnt = new HashMap<>();
+        int ans = 0;
+        for (int pre : prefix) {
+            ans += cnt.getOrDefault(pre, 0);
+            cnt.put(pre + goal, cnt.getOrDefault(pre + goal, 0) + 1);
+        }
+        return ans;
+    }
 
     public static void main(String[] args) {
         int[] A = {1, 0, 1, 0, 1};
