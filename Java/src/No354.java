@@ -9,7 +9,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class No354 {
-    public int maxEnvelopes(int[][] envelopes) {
+    /*public int maxEnvelopes(int[][] envelopes) {
         int size = envelopes.length;
         if (size == 0) return 0;
         Arrays.sort(envelopes, new Comparator<int[]>() {
@@ -41,5 +41,29 @@ public class No354 {
             else right = mid;
         }
         return left;
+    }*/
+    public int maxEnvelopes(int[][] envelopes) {
+        int n = envelopes.length;
+        int[] dp = new int[n + 1];
+        Arrays.sort(envelopes, (o1, o2) -> {
+            return o2[0] - o1[0] == 0 ? o2[1] - o1[1] : o2[0] - o1[0];
+        });
+        int ans = 0;
+        for (int i = 0; i < n; ++i) {
+            dp[i] = 1;
+            for (int j = 0; j < i; ++j) {
+                if (envelopes[j][0] > envelopes[i][0] && envelopes[j][1] > envelopes[i][1]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+            ans = Math.max(dp[i], ans);
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        int[][] envelopes = {{5, 4}, {6, 4}, {6, 7}, {2, 3}};
+        No354 no354 = new No354();
+        System.out.println(no354.maxEnvelopes(envelopes));
     }
 }
