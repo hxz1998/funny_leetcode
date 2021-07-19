@@ -16,4 +16,15 @@ public class No12 {
         }
         return builder.toString();
     }
+
+    public static class No231 {
+        public boolean isPowerOfTwo(int n) {
+            int num = 0;
+            while (num < 31) {
+                if (n == (1 << num)) return true;
+                num++;
+            }
+            return false;
+        }
+    }
 }
