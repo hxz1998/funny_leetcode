@@ -8,21 +8,25 @@ import java.util.Arrays;
 public class No918 {
     public int maxSubarraySumCircular(int[] nums) {
         int n = nums.length;
-        int[] numsCopy = new int[n * 2];
-        for (int i = 0; i < n; ++i) {
-            numsCopy[i] = nums[i];
-            numsCopy[i + n] = nums[i];
+        int max = Integer.MIN_VALUE, curr = 0, min = Integer.MAX_VALUE, sum = 0;
+        for (int num : nums) {
+            curr = Math.max(num, curr + num);
+            max = Math.max(curr, max);
+            sum += num;
         }
-        return reduce(numsCopy);
+        if (max < 0) return max;
+        curr = 0;
+        for (int num : nums) {
+            curr = Math.min(num, num + curr);
+            min = Math.min(min, curr);
+        }
+        return Math.max(max, sum - min);
     }
 
-    private int reduce(int[] nums) {
-        int n = nums.length - 1;
-        int[] dp = new int[n + 1];
-        for (int i = 0; i < n; ++i) {
-            dp[i + 1] = Math.max(dp[i] + nums[i], nums[i]);
-        }
-        return Arrays.stream(dp).max().getAsInt();
+    public static void main(String[] args) {
+        int[] nums = {-2, -3, -1};
+        No918 no918 = new No918();
+        System.out.println(no918.maxSubarraySumCircular(nums));
     }
 }
 
