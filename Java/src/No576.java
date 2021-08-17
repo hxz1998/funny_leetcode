@@ -6,7 +6,7 @@
 public class No576 {
     public int findPaths(int m, int n, int N, int i, int j) {
         if (N == 0) return 0;
-        int ans = 0, mod = 1_000_000_007;
+        int mod = 1_000_000_007;
         int[][] dp = new int[m][n];
         int[][] dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
         for (int k = 0; k < N; ++k) {
