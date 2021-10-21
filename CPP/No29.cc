@@ -32,7 +32,7 @@ public:
 };
 ********************************************/
 
-class Solution {
+/*class Solution {
 public:
     int divide(int dividend, int divisor) {
         // 特殊情况处理
@@ -76,7 +76,40 @@ public:
         }
         return count + div(a - tb, b);
     }
+};*/
+
+/**
+ * 2021年10月12日 重新来做一下
+ */
+
+class Solution {
+public:
+    int divide(int dividend, int divisor) {
+        if (dividend == 0) return 0;
+        if (divisor == 1) return dividend;
+        if (divisor == -1) return dividend == INT32_MIN ? INT32_MAX : -dividend;
+        int sign = 1;
+        if ((dividend < 0 && divisor > 0) || (dividend > 0 && divisor < 0)) sign = -1;
+        dividend = abs(dividend);
+        divisor = abs(divisor);
+        long ret = div(dividend, divisor);
+        if (sign == -1) return -ret;
+        else return ret > INT32_MAX ? INT32_MAX : ret;
+    }
+
+private:
+    long div(long a, long b) {
+        if (a < b) return 0;
+        long tb = b;
+        long count = 1;
+        while (tb + tb <= a) {
+            count *= 2;
+            tb *= 2;
+        }
+        return count + div(a - tb, b);
+    }
 };
+
 
 int main(int argc, char *args[]) {
     Solution s;

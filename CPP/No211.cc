@@ -12,7 +12,7 @@ struct Trie {
 
     Trie() {
         is_end = false;
-        for (int i = 0; i < 26; i++) next[i] = NULL;
+        for (int i = 0; i < 26; i++) next[i] = nullptr;
     }
 };
 
@@ -22,7 +22,7 @@ private:
 
     bool subSearch(Trie *node, string word) {
         if (!node) return false;
-        int n = word.length();
+        size_t n = word.length();
         for (int i = 0; i < n; i++) {
             if (word[i] == '.') {
                 for (int j = 0; j < 26; j++) {

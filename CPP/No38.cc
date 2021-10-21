@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class Solution {
+/*class Solution {
 public:
     string countAndSay(int n) {
         if (n == 1) return "1";
@@ -31,11 +31,35 @@ public:
         }
         return ans;
     }
+};*/
+
+class Solution {
+public:
+    string countAndSay(int n) {
+        string ans = "1";
+        for (int idx = 1; idx < n; ++idx) {
+            string buf;
+            int prevValue = ans[0] - '0';
+            int prevValueCount = 1;
+            for (int i = 1; i < ans.length(); ++i) {
+                int value = ans[i] - '0';
+                if (value == prevValue) prevValueCount++;
+                else {
+                    buf.append(to_string(prevValueCount)).append(to_string(prevValue));
+                    prevValue = value;
+                    prevValueCount = 1;
+                }
+            }
+            buf.append(to_string(prevValueCount)).append(to_string(prevValue));
+            ans = buf;
+        }
+        return ans;
+    }
 };
 
 int main(int argc, char *args[]) {
     Solution s;
-    cout << s.countAndSay(5) << endl;
+    // cout << s.countAndSay(5) << endl;
     map<string, int> mapper;
     mapper["a"] = 1;
     mapper["b"] = 2;
@@ -46,4 +70,6 @@ int main(int argc, char *args[]) {
         tmp += it->first;
     }
     cout << tmp << endl;
+
+    cout << s.countAndSay(6) << endl;
 }
