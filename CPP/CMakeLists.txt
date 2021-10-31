@@ -12,6 +12,8 @@ add_subdirectory(interview-book/)
 # 该目录下为《程序员的算法趣题》程序
 add_subdirectory(interesting-problems/)
 
+add_subdirectory(saikr/)
+
 
 add_executable(cc main.cc complex_node.hh)
 add_executable(No1 No1.cc)
