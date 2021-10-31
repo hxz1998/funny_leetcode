@@ -12,6 +12,8 @@ add_subdirectory(interview-book/)
 # 该目录下为《程序员的算法趣题》程序
 add_subdirectory(interesting-problems/)
 
+add_subdirectory(saikr/)
+
 
 add_executable(cc main.cc complex_node.hh)
 add_executable(No1 No1.cc)
@@ -790,3 +792,5 @@ add_executable(lccup2021-No3 lccup2021/No3.cc)
 
 add_executable(weekly-Contest-263-No1 weekly-contest-263/No1.cc)
 add_executable(weekly-Contest-263-No2 weekly-contest-263/No2.cc)
+
+
