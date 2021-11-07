@@ -793,4 +793,5 @@ add_executable(lccup2021-No3 lccup2021/No3.cc)
 add_executable(weekly-Contest-263-No1 weekly-contest-263/No1.cc)
 add_executable(weekly-Contest-263-No2 weekly-contest-263/No2.cc)
 
-
+add_executable(No301 No301.cc)
+add_executable(No869 No869.cc)
