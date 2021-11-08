@@ -6,10 +6,11 @@
 #include <vector>
 #include <unordered_map>
 #include <algorithm>
+#include <unordered_set>
 
 using namespace std;
 
-class Solution {
+/*class Solution {
 public:
     int distributeCandies(vector<int> &candies) {
         int ans = 1;
@@ -18,6 +19,16 @@ public:
             if (candies[i] != candies[i - 1]) ++ans;
         }
         return ans;
+    }
+};*/
+class Solution {
+public:
+    int distributeCandies(vector<int> &candyType) {
+        unordered_set<int> count;
+        for (int type: candyType) count.insert(type);
+        size_t n = candyType.size();
+        if (n / 2 >= count.size()) return count.size();
+        else return n / 2;
     }
 };
 

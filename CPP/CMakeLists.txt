@@ -795,3 +795,4 @@ add_executable(weekly-Contest-263-No2 weekly-contest-263/No2.cc)
 
 add_executable(No301 No301.cc)
 add_executable(No869 No869.cc)
+add_executable(No407 No407.cc)
