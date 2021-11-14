@@ -7,17 +7,17 @@
 
 using namespace std;
 
-class Solution {
+/*class Solution {
 public:
     bool detectCapitalUse(string word) {
-        /**
+        *
          * 如果：
          *  第一个是大写，那么后面，
          *      要么都是大写
          *      要么没有大写
          *  第一个是小写，那么后面
          *      就不能出现大写
-         */
+
         bool upper_first = true, lower = false, again_upper = false;
         for (int i = 0; i < word.length(); ++i) {
             if (i == 0 && word[i] >= 97 && word[i] <= 122) upper_first = false;
@@ -32,6 +32,22 @@ public:
             }
         }
         return true;
+    }
+};*/
+class Solution {
+public:
+    bool detectCapitalUse(string word) {
+        if ([&]() -> bool {
+            for (char c: word) if (islower(c)) return false;
+            return true;
+        }())
+            return true;
+        if ([&]() -> bool {
+            for (int idx = 1; idx < word.size(); ++idx) if (isupper(word[idx])) return false;
+            return true;
+        }())
+            return true;
+        return false;
     }
 };
 
