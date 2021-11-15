@@ -12,8 +12,11 @@ add_subdirectory(interview-book/)
 # 该目录下为《程序员的算法趣题》程序
 add_subdirectory(interesting-problems/)
 
+# 赛氪网站的竞赛
 add_subdirectory(saikr/)
 
+# 剑指 offer Ⅰ
+add_subdirectory(offer/)
 
 add_executable(cc main.cc complex_node.hh)
 add_executable(No1 No1.cc)
