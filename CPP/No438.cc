@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Solution {
+/*class Solution {
 public:
     vector<int> findAnagrams(string s, string p) {
         vector<int> ans;
@@ -24,10 +24,22 @@ public:
         }
         return ans;
     }
+};*/
+
+class Solution {
+public:
+    vector<int> findAnagrams(string s, string p) {
+        vector<int> needs(26, 0), windows(26, 0);
+        for (char c: p) needs[c - 'a']++;
+        int left = 0, right = 0;
+        while (left < s.size()) {
+
+        }
+    }
 };
 
 int main() {
     Solution s;
-    for (int item : s.findAnagrams("cbaebabacd", "abc"))
+    for (int item: s.findAnagrams("cbaebabacd", "abc"))
         cout << item << endl;
 }

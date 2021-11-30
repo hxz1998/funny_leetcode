@@ -7,6 +7,7 @@
 
 using namespace std;
 
+/*
 class Solution {
 private:
     vector<int> _nums;
@@ -24,12 +25,16 @@ public:
         original = copyVector(nums);
     }
 
-    /** Resets the array to its original configuration and return it. */
+    */
+/** Resets the array to its original configuration and return it. *//*
+
     vector<int> reset() {
         return original;
     }
 
-    /** Returns a random shuffling of the array. */
+    */
+/** Returns a random shuffling of the array. *//*
+
     vector<int> shuffle() {
         vector<int> aux = copyVector(original);
         for (int i = 0; i < _nums.size(); i++) {
@@ -40,4 +45,43 @@ public:
         }
         return _nums;
     }
+};*/
+
+class Solution {
+private:
+    vector<int> origin;
+
+    vector<int> copyVector(const vector<int> &vec) {
+        vector<int> ret(vec.size());
+        for (int i = 0; i < vec.size(); ++i) ret[i] = vec[i];
+        return ret;
+    }
+
+public:
+    Solution(vector<int> &nums) {
+        origin = copyVector(nums);
+    }
+
+    vector<int> reset() {
+        return origin;
+    }
+
+    vector<int> shuffle() {
+        vector<int> aux = copyVector(origin);
+        vector<int> ret(aux.size());
+        for (int idx = 0; idx < aux.size(); ++idx) {
+            int i = rand() % aux.size();
+            ret[idx] = aux[i];
+            aux[i] = aux.back();
+            aux.pop_back();
+        }
+        return ret;
+    }
 };
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution* obj = new Solution(nums);
+ * vector<int> param_1 = obj->reset();
+ * vector<int> param_2 = obj->shuffle();
+ */
