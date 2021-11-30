@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Solution {
+/*class Solution {
 public:
     int findLHS(vector<int> &nums) {
         unordered_map<int, int> counter;
@@ -22,6 +22,19 @@ public:
             }
         }
         return length;
+    }
+};*/
+class Solution {
+public:
+    int findLHS(vector<int> &nums) {
+        unordered_map<int, int> mapper;
+        for (int num: nums) mapper[num]++;
+        int ans = 0;
+        for (auto iter = mapper.begin(); iter != mapper.end(); ++iter) {
+            if (mapper.find(iter->first + 1) != mapper.end())
+                ans = max(ans, mapper[iter->first + 1] + mapper[iter->first]);
+        }
+        return ans;
     }
 };
 
