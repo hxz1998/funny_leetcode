@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Solution {
+/*class Solution {
 public:
     int integerReplacement(int n) {
         if (n == INT32_MAX) return 32;
@@ -24,6 +24,29 @@ public:
                 n /= 2;
             }
             ++ans;
+        }
+        return ans;
+    }
+};*/
+
+class Solution {
+public:
+    int integerReplacement(int n) {
+        if (n == 1) return 0;
+        if (n == INT32_MAX) return 32;
+        int ans = 0;
+        while (n > 1) {
+            if (n & 1) {
+                if ((n % 4 == 3) && n != 3) {
+                    n++;
+                    ans++;
+                } else {
+                    --n;
+                }
+            } else {
+                n /= 2;
+            }
+            ans++;
         }
         return ans;
     }
