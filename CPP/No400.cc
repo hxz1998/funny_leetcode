@@ -3,10 +3,11 @@
  * Copyright (c) 2020/9/13 Xiaozhong. All rights reserved.
  */
 #include "iostream"
+#include <cmath>
 
 using namespace std;
 
-class Solution {
+/*class Solution {
 public:
     int findNthDigit(int n) {
         // base 代表每一个数值域的范围 例如 0-9 10-90，digits代表了它应该出现在几位数中
@@ -26,6 +27,40 @@ public:
 
         for (int i = idx; i < digits; ++i) number /= 10;
         return number % 10;
+    }
+};*/
+
+class Solution {
+public:
+    int findNthDigit(int n) {
+        int left = 1, right = 9;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (totalDigit(mid) >= n) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        int prevDigits = totalDigit(left - 1);
+        int idx = n - prevDigits - 1;
+        int start = (int) pow(10, left - 1);
+        int num = start + idx / left;
+        int digitIndex = idx % left;
+        int digit = (num / ((int) pow(10, left - digitIndex - 1))) % 10;
+        return digit;
+    }
+
+private:
+    int totalDigit(int n) {
+        int digits = 0;
+        int currLength = 1, base = 9;
+        while (currLength <= n) {
+            digits += currLength * base;
+            base *= 10;
+            currLength++;
+        }
+        return digits;
     }
 };
 
