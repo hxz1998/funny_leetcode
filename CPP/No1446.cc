@@ -25,7 +25,7 @@ public:
             }
             idx++;
         }
-        return ans;
+        return max(ans, cnt);
     }
 };
 
