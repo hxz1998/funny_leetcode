@@ -10,7 +10,7 @@
 using namespace std;
 
 
-class Solution {
+/*class Solution {
 public:
     vector<string> findRelativeRanks(vector<int> &nums) {
         vector<string> ans(nums.size());
@@ -40,19 +40,45 @@ public:
         }
         return ans;
     }
+};*/
+class Solution {
+public:
+    vector<string> findRelativeRanks(vector<int> &score) {
+        map<int, int, greater<int>> mapper;
+        for (int idx = 0; idx < score.size(); ++idx) mapper[score[idx]] = idx;
+        vector<string> ans(score.size());
+        int rank = 1;
+        for (map<int, int>::iterator iter = mapper.begin(); iter != mapper.end(); ++iter) {
+            switch (rank) {
+                case 1 :
+                    ans[iter->second] = "Gold Medal";
+                    break;
+                case 2 :
+                    ans[iter->second] = "Silver Medal";
+                    break;
+                case 3:
+                    ans[iter->second] = "Bronze Medal";
+                    break;
+                default:
+                    ans[iter->second] = to_string(rank);
+            }
+            rank++;
+        }
+        return ans;
+    }
 };
 
 int main() {
     Solution s;
     vector<int> nums = {5, 4, 3, 2, 1};
     vector<string> ans = s.findRelativeRanks(nums);
-    for (string item : ans) {
+    for (string item: ans) {
         cout << item << endl;
     }
     nums = {10, 3, 8, 9, 4};
     ans = s.findRelativeRanks(nums);
 
-    for (string item : ans) {
+    for (string item: ans) {
         cout << item << endl;
     }
 }

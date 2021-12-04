@@ -26,17 +26,42 @@ public:
     }
 };*/
 
+/*
 class Solution {
 public:
     vector<int> findAnagrams(string s, string p) {
         vector<int> needs(26, 0), windows(26, 0);
+        vector<int> ans;
         for (char c: p) needs[c - 'a']++;
         int left = 0, right = 0;
         while (left < s.size()) {
-
+            while (right < s.size() && right - left + 1 <= p.size()) windows[s[right++] - 'a']++;
+            if (needs == windows) ans.emplace_back(left);
+            windows[s[left++] - 'a']--;
         }
+        return ans;
     }
 };
+*/
+
+
+class Solution {
+public:
+    vector<int> findAnagrams(string s, string p) {
+        vector<int> ans;
+        int left = 0, right = 0;
+        vector<int> needs(26, 0), windows(26, 0);
+        for (const char &c: p) needs[c - 'a']++;
+        while (right < s.size()) {
+            int currRight = s[right++] - 'a';
+            windows[currRight]++;
+            while (needs[currRight] < windows[currRight]) --windows[s[left++] - 'a'];
+            if (right - left == p.size()) ans.emplace_back(left);
+        }
+        return ans;
+    }
+};
+
 
 int main() {
     Solution s;

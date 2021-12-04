@@ -15,6 +15,7 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
+/*
 class Solution {
 private:
     int tilt = 0;
@@ -32,5 +33,24 @@ public:
     int findTilt(TreeNode *root) {
         dfs(root);
         return tilt;
+    }
+};*/
+
+class Solution {
+private:
+    int ans = 0;
+public:
+    int findTilt(TreeNode *root) {
+        dfs(root);
+        return ans;
+    }
+
+private:
+    int dfs(TreeNode *root) {
+        if (root == nullptr) return 0;
+        int left = dfs(root->left);
+        int right = dfs(root->right);
+        ans += abs(left - right);
+        return left + right + root->val;
     }
 };

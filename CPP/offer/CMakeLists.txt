@@ -1,3 +1,24 @@
+<<<<<<< HEAD
 add_executable(No09 No09.cc)
 add_executable(No18 No18.cc)
 add_executable(No22 No22.cc)
+=======
+# 一些基本的概念尝试
+#add_subdirectory(tutorial)
+
+add_executable(No09 No09.cc)
+add_executable(No03 No03.cc)
+add_executable(No04 No04.cc)
+add_executable(No05 No05.cc)
+add_executable(No06 No06.cc)
+add_executable(No07 No07.cc)
+add_executable(No10 No10.cc)
+add_executable(No11 No11.cc)
+add_executable(No12 No12.cc)
+add_executable(No13 No13.cc)
+add_executable(No14_1 No14_1.cc)
+add_executable(No14_2 No14_2.cc)
+add_executable(No15 No15.cc)
+add_executable(No16 No16.cc)
+add_executable(No17 No17.cc)
+>>>>>>> 96f475e0a501931ee5d4d375f1c4adbfb2478d10
