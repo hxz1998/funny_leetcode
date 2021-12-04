@@ -801,3 +801,4 @@ add_executable(No869 No869.cc)
 add_executable(No407 No407.cc)
 
 add_executable(No1446 No1446.cc)
+add_executable(No1005 No1005.cc)
