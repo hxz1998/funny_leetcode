@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-add_executable(No09 No09.cc)
-add_executable(No18 No18.cc)
-add_executable(No22 No22.cc)
-=======
 # 一些基本的概念尝试
 #add_subdirectory(tutorial)
 
@@ -21,4 +16,13 @@ add_executable(No14_2 No14_2.cc)
 add_executable(No15 No15.cc)
 add_executable(No16 No16.cc)
 add_executable(No17 No17.cc)
->>>>>>> 96f475e0a501931ee5d4d375f1c4adbfb2478d10
+
+add_executable(No18 No18.cc)
+add_executable(No22 No22.cc)
+add_executable(No26 No26.cc)
+add_executable(No27 No27.cc)
+
+add_executable(Offer28 Offer28.cc)
+add_executable(Offer29 Offer29.cc)
+add_executable(Offer30 Offer30.cc)
+add_executable(Offer31 Offer31.cc)
