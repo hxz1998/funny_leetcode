@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Solution {
+/*class Solution {
 private:
     // 快速幂算法加速计算，但是每一个发生乘法的地方仍要 mod 1337
     int qpow(int x, int n) {
@@ -31,6 +31,34 @@ public:
             a = qpow(a, 10) % 1337; // 倍增底数
         }
         return ans;
+    }
+};*/
+class Solution {
+private:
+    int mod = 1337;
+public:
+    int superPow(int a, vector<int> &b) {
+        int n = b.size();
+        int ans = 1;
+        a %= mod;
+        while (n) {
+            ans *= quickPow(a, b[n - 1]) % mod;
+            a = quickPow(a, 10) % mod;
+            n--;
+        }
+        return ans;
+    }
+
+private:
+    // 快速幂算法，计算 x^y 的结果
+    int quickPow(int x, int y) {
+        int ret = 1;
+        while (y > 0) {
+            if (y & 1) ret = (ret * x) % mod;
+            y >>= 1;
+            x = x * x % mod;
+        }
+        return ret;
     }
 };
 
