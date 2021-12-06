@@ -8,6 +8,7 @@
 
 using namespace std;
 
+/*
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
@@ -22,4 +23,20 @@ public:
         // 检查完成，直接返回 true
         return true;
     }
+};*/
+#include "vector"
+
+class Solution {
+public:
+    bool canConstruct(string ransomNote, string magazine) {
+        vector<int> table(26, 0);
+        for (char c: magazine) table[c - 'a']++;
+        for (char c: ransomNote) if (table[c - 'a'] == 0) return false; else table[c - 'a']--;
+        return true;
+    }
 };
+
+int main() {
+    Solution s;
+    cout << s.canConstruct("aa", "aab") << endl;
+}

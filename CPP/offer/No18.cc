@@ -17,15 +17,26 @@ struct ListNode {
 class Solution {
 public:
     ListNode *deleteNode(ListNode *head, int val) {
-        ListNode *curr = head;
+        ListNode *dummyHead = new ListNode(0);
+        dummyHead->next = head;
+        ListNode *curr = head, *prev = dummyHead;
         while (curr != nullptr) {
-            if (curr->val == val) break;
-            else curr = curr->next;
+            if (curr->val == val) {
+                prev->next = curr->next;
+                delete curr;
+                return dummyHead->next;
+            }
+            curr = curr->next;
+            prev = prev->next;
         }
-        while (curr->next != nullptr) {
-            curr->val = curr->next->val;
-        }
-        curr->next = nullptr;
-        return head;
+        return dummyHead->next;
     }
 };
+
+int main() {
+    ListNode *l1 = new ListNode(-3), *l2 = new ListNode(5), *l3 = new ListNode(-99);
+    l1->next = l2;
+    l2->next = l3;
+    Solution solution;
+    solution.deleteNode(l1, -3);
+}
