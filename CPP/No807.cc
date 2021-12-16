@@ -7,6 +7,7 @@
 
 using namespace std;
 
+/*
 class Solution {
 public:
     int maxIncreaseKeepingSkyline(vector<vector<int>> &grid) {
@@ -22,6 +23,28 @@ public:
         for (int r = 0; r < n; ++r) {
             for (int c = 0; c < n; ++c) {
                 ans += min(rowMaxs[r], columnMaxs[c]) - grid[r][c];
+            }
+        }
+        return ans;
+    }
+};*/
+
+class Solution {
+public:
+    int maxIncreaseKeepingSkyline(vector<vector<int>> &grid) {
+        int n = grid.size();
+        if (n == 0) return 0;
+        vector<int> rowMaxValue(n), columnMaxValue(n);
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                rowMaxValue[i] = max(rowMaxValue[i], grid[i][j]);
+                columnMaxValue[j] = max(columnMaxValue[j], grid[i][j]);
+            }
+        }
+        int ans = 0;
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                ans += max(min(columnMaxValue[j], rowMaxValue[i]) - grid[i][j], 0);
             }
         }
         return ans;
