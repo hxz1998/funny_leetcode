@@ -804,3 +804,7 @@ add_executable(No407 No407.cc)
 add_executable(No1446 No1446.cc)
 add_executable(No1005 No1005.cc)
 add_executable(No1034 No1034.cc)
+
+add_executable(weekly-contest-272-No1 weekly-contest-272/No1.cc)
+add_executable(weekly-contest-272-No2 weekly-contest-272/No2.cc)
+add_executable(weekly-contest-272-No3 weekly-contest-272/No3.cc)
