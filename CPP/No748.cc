@@ -42,13 +42,14 @@ public:
 class Solution {
 public:
     string shortestCompletingWord(string licensePlate, vector<string> &words) {
+
         vector<int> cnt(26, 0);
         covert(cnt, licensePlate);
         string ans;
         for (const string &word: words) {
             vector<int> tmp(26, 0);
             covert(tmp, word);
-            if (check(cnt, tmp) && (ans.length() > word.length() ||ans.empty())) ans = word;
+            if (check(cnt, tmp) && (ans.length() > word.length() || ans.empty())) ans = word;
         }
         return ans;
     }
