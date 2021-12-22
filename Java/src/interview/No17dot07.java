@@ -45,13 +45,7 @@ public class No17dot07 {
     }
 
     public String[] trulyMostPopular(String[] names, String[] synonyms) {
-        ArrayList<String> list = new ArrayList<>(Arrays.asList(names));
-        Union union = new Union();
-        for (String name : names) {
-            int start = name.indexOf("(");
-            int end = name.indexOf(")");
-            union.put(name.substring(0, ));
-        }
+        return null;
     }
 
     public static void main(String[] args) {
