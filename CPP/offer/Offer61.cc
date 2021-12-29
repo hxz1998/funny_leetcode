@@ -1,10 +1,10 @@
-/*
- * Created by Xiaozhong on 12/22/2021.
- * Copyright (c) 12/22/2021 Xiaozhong. All rights reserved.
+<<<<<<< HEAD
+/**
+ * Created by Xiaozhong on 2021/12/21.
+ * Copyright (c) 2021/12/21 Xiaozhong. All rights reserved.
  */
 #include "iostream"
 #include "vector"
-#include "algorithm"
 #include "unordered_set"
 
 using namespace std;
@@ -24,6 +24,5 @@ public:
             }
         }
         return mx - ms < 5;
-
     }
 };

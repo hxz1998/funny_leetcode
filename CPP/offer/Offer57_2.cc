@@ -12,21 +12,17 @@ class Solution {
 public:
     vector<vector<int>> findContinuousSequence(int target) {
         vector<vector<int>> ans;
-        int left = 1, right = target - 1;
-        while (left < right) {
-            int res = (left + right) * (right - left + 1);
-            if (res == 2 * target) ans.emplace_back(build(left, right));
-            else if (res < 2 * target) left++;
-            else right--;
+        for (int left = 1, right = 2; left < right; ) {
+            int sum = (right + left) * (right - left + 1);
+            if (sum == target * 2) {
+                vector<int> buffer;
+                for (int num = left; num <= right; ++num) buffer.emplace_back(num);
+                ans.emplace_back(buffer);
+                left++;
+            } else if (sum < target * 2) right++;
+            else left++;
         }
         return ans;
-    }
-
-private:
-    vector<int> build(const int left, const int right) {
-        vector<int> ret;
-        for (int i = left; i <= right; ++i) ret.emplace_back(i);
-        return ret;
     }
 };
 
