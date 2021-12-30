@@ -19,6 +19,9 @@ add_subdirectory(saikr/)
 # 剑指 offer Ⅰ
 add_subdirectory(offer/)
 
+# 热门100题
+add_subdirectory(hot100/)
+
 add_executable(cc main.cc complex_node.hh)
 add_executable(No1 No1.cc)
 add_executable(No2 No2.cc)
