@@ -1,3 +1,6 @@
 add_executable(Hot1 Hot1.cc)
 add_executable(Hot2 Hot2.cc)
 add_executable(Hot3 Hot3.cc)
+add_executable(Hot5 Hot5.cc)
+add_executable(Hot11 Hot11.cc)
+add_executable(Hot15 Hot15.cc)

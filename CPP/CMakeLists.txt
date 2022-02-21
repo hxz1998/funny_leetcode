@@ -3,6 +3,7 @@ project(funny-leetcode)
 
 set(CMAKE_CXX_STANDARD 20)
 
+add_subdirectory(offer2/)
 
 # 该目录下文件为阅读 《算法竞赛入门经典（第二版）》 所产生文件
 add_subdirectory(acm-intro/)
@@ -818,3 +819,14 @@ add_executable(No1078 No1078.cc)
 add_executable(No472 No472.cc)
 add_executable(No1995 No1995.cc)
 add_executable(No846 No846.cc)
+add_executable(No1716 No1716.cc)
+
+add_executable(No1763 No1763.cc)
+add_executable(No1219 No1219.cc)
+add_executable(No1748 No1748.cc)
+add_executable(No2000 No2000.cc)
+add_executable(No1725 No1725.cc)
+add_executable(No1414 No1414.cc)
+add_executable(No1405 No1405.cc)
+add_executable(No2006 No2006.cc)
+add_executable(No1984 No1984.cc)
