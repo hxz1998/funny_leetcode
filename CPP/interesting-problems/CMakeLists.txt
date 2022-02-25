@@ -7,3 +7,4 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(Q04 Q04.cc)
 
 add_executable(CXXStandLibarySharedPointer CXXStandLibarySharedPointer.cc)
+#add_executable(L3VirtualDevice L3VirtualDevice.cc)
