@@ -8,3 +8,4 @@ add_executable(Q04 Q04.cc)
 
 add_executable(CXXStandLibarySharedPointer CXXStandLibarySharedPointer.cc)
 add_executable(CXXSmartPointer2 CXXSmartPointer2.cc)
+#add_executable(L3VirtualDevice L3VirtualDevice.cc)
