@@ -15,8 +15,15 @@ public:
         while (true) {
             while (zero < n && nums[zero] != 0) zero++;
             while (notZero < n && nums[notZero] == 0) notZero++;
-            if (zero == n) return;
-            swap(nums[zero], nums[notZero]);
+            if (zero == n || notZero == n || zero == n - 1 && nums[zero] == 0) return;
+            if (zero < notZero) swap(nums[zero], nums[notZero]);
+            else notZero++;
         }
     }
 };
+
+int main() {
+    vector<int> nums = {1, 0, 0};
+    Solution s;
+    s.moveZeroes(nums);
+}
