@@ -26,6 +26,7 @@ add_subdirectory(hot100/)
 add_executable(cc main.cc complex_node.hh)
 add_executable(No1 No1.cc)
 add_executable(No2 No2.cc)
+add_executable(No6 No6.cc)
 add_executable(No7 No7.cc)
 add_executable(No9 No9.cc)
 

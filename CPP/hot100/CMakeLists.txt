@@ -57,3 +57,10 @@ add_executable(Hot198 Hot198.cc)
 add_executable(Hot647 Hot647.cc)
 add_executable(Hot394 Hot394.cc)
 add_executable(Hot208 Hot208.cc)
+
+add_executable(Hot234 Hot234.cc)
+add_executable(Hot226 Hot226.cc)
+add_executable(Hot221 Hot221.cc)
+add_executable(Hot215 Hot215.cc)
+
+add_executable(Hot283 Hot283.cc)
