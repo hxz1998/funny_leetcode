@@ -21,18 +21,19 @@ struct TreeNode {
 
 class Solution {
 private:
-    int max1 = 0, max2 = 0;
+    int ans = 0;
 
-    void dfs(TreeNode *root, int height) {
-        if (root == nullptr) return;
-        dfs(root->left, height + 1);
-        dfs(root->right, height + 1);
-        max2 = height <= max1 && height > max2 ? height : max2;
-        max1 = max(max1, height);
+    int depth(TreeNode *root) {
+        if (root == nullptr) return 0;
+        int left = depth(root->left);
+        int right = depth(root->right);
+        ans = max(ans, left + right);
+        return max(left, right) + 1;
     }
 
 public:
     int diameterOfBinaryTree(TreeNode *root) {
-
+        depth(root);
+        return ans;
     }
 };
