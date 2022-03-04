@@ -22,13 +22,13 @@
 using namespace std;
 
 class Animal {
-private:
+protected:
     string name;
 public:
     Animal(string str) : name(std::move(str)) {};
 
     void func(const string &n) {
-        cout << n << " anime " << name;
+        cout << "Anime " << n << " " << name << endl;
     }
 };
 
@@ -38,17 +38,13 @@ private:
 public:
     Person(string str, int a) : Animal(std::move(str)), age(a) {
     }
-
     void func(const string &n) {
-        Animal::func(n);
-        cout << endl << n << "Person" << endl;
+        cout << "Person " << n << " " << age << " " << name << endl;
     }
 };
 
 int main() {
-
-    Person p("nihao", 12);
-    Animal a("niha;");
-    a.func("a");
-    p.func("hahah");
+    Animal *animal = new Person("nihao", 123);
+    string message = " 666";
+    animal->func(message);
 }
