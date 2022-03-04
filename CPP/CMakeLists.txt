@@ -834,3 +834,4 @@ add_executable(No1984 No1984.cc)
 add_executable(No838 No838.cc)
 
 add_executable(No2016 No2016.cc)
+add_executable(No2104 No2104.cc)
