@@ -23,6 +23,9 @@ add_subdirectory(offer/)
 # 热门100题
 add_subdirectory(hot100/)
 
+# 笔试
+add_subdirectory(examination/)
+
 add_executable(cc main.cc complex_node.hh)
 add_executable(No1 No1.cc)
 add_executable(No2 No2.cc)
@@ -835,3 +838,4 @@ add_executable(No838 No838.cc)
 
 add_executable(No2016 No2016.cc)
 add_executable(No2104 No2104.cc)
+add_executable(No2100 No2100.cc)
