@@ -23,39 +23,25 @@ class Solution {
 public:
     int maximalRectangle(vector<vector<char>> &matrix) {
         if (matrix.empty()) return 0;
-        int n = (int) matrix.size(), m = (int) matrix[0].size();
-        vector<vector<vector<int>>> dp(n, vector<vector<int>>(m, vector<int>(3)));
-        int ans = 0;
-        // 0 - 从上往下, 1 - 从左往右, 2 - 斜对角线
+        int n = static_cast<int>( matrix.size()), m = static_cast<int>((int) matrix[0].size());
+        vector<vector<int>> dp(n, vector<int>(m));
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < m; ++j) {
-                int val = matrix[i][j] == '1' ? 1 : 0;
-                if (val == 0) continue;
-                if (i == 0 && j == 0) {
-                    dp[i][j][0] = val;
-                    dp[i][j][1] = val;
-                    dp[i][j][2] = val;
-                    ans = 1;
-                } else if (i == 0) {
-                    dp[i][j][0] = val;
-                    dp[i][j][1] = dp[i][j - 1][1] + val;
-                    dp[i][j][2] = val;
-                    ans = max(ans, 1 * dp[i][j][1]);
-                } else if (j == 0) {
-                    dp[i][j][0] = dp[i - 1][j][0] + val;
-                    dp[i][j][1] = val;
-                    dp[i][j][2] = val;
-                    ans = max(ans, 1 * dp[i][j][0]);
-                } else {
-                    int a = dp[i][j][0] = dp[i - 1][j][0] + val;
-                    int b = dp[i][j][1] = dp[i][j - 1][1] + val;
-                    int c = dp[i][j][2] = dp[i - 1][j - 1][2] + val;
-                    if (a == 1 || b == 1 || c == 1) {
-                        ans = max(ans, 1 * max(a, max(b, c)));
-                    } else {
-                        ans = max(ans, min(a, c) * min(b, c));
-                    }
-                }
+                if (matrix[i][j] == '0') continue;
+                if (i == 0) dp[i][j] = 1;
+                else dp[i][j] = dp[i - 1][j] + 1;
+            }
+        }
+
+        int ans = 0;
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < m; ++j) {
+                if (matrix[i][j] == '0') continue;
+                if (ans >= dp[i][j] * m) continue;
+                int left = j, right = j;
+                while (left >= 0 && dp[i][left] >= dp[i][j]) left--;
+                while (right < m && dp[i][right] >= dp[i][j]) right++;
+                ans = max(ans, (right - left - 1) * dp[i][j]);
             }
         }
         return ans;

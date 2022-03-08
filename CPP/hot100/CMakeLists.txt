@@ -97,3 +97,7 @@ add_executable(Hot4 Hot4.cc)
 add_executable(Hot32 Hot32.cc)
 add_executable(Hot23 Hot23.cc)
 add_executable(Hot85 Hot85.cc)
+
+add_executable(Hot84 Hot84.cc)
+add_executable(Hot42 Hot42.cc)
+add_executable(Hot72 Hot72.cc)
