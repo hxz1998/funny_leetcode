@@ -31,6 +31,7 @@ public:
     }
 };
 
+
 class Lizard : public Animal {
 public:
     int l;
@@ -41,6 +42,13 @@ public:
         this->l = rhs.l;
         return *this;
     }
+
+    Lizard &operator=(const Animal &rhs) {
+        // 如果转换失败，会报错，bad_cast
+//        const Lizard &lizard = dynamic_cast<const Lizard &>(rhs);
+//        this->l = lizard.l;
+        return operator=(dynamic_cast<const Lizard &>(rhs));
+    }
 };
 
 int main() {
@@ -48,9 +56,14 @@ int main() {
     Lizard l2(3, 4);
     Animal *a1 = &l1;
     Animal *a2 = &l2;
-
+    Animal a(1);
 //    l1 = l2;    // 只换掉了 Lizard 部分的内容，属于部分赋值
 
     *a1 = *a2;  // 只替换掉了 Animal 那部分
+//    l1 = a;   // 会报错了！std::bad_cast，因为 Animal 不能转换成 Lizard
+
+    array<int, 2> arr;
+    int nu = 1;
+    cout << ++++++++++++nu << endl;
     return 0;
 }
