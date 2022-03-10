@@ -103,3 +103,6 @@ add_executable(Hot42 Hot42.cc)
 add_executable(Hot72 Hot72.cc)
 
 add_executable(Hot312 Hot312.cc)
+add_executable(Hot124 Hot124.cc)
+add_executable(Hot301 Hot301.cc)
+add_executable(Hot239 Hot239.cc)
