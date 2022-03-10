@@ -22,7 +22,7 @@ using namespace std;
 class Solution {
     struct cmp {
         bool operator()(const pair<int, int> &lhs, const pair<int, int> &rhs) {
-            return lhs.first < rhs.first || lhs.second > rhs.second;
+            return lhs.first == rhs.first ? lhs.second > rhs.second : lhs.first < rhs.first;
         }
     };
 
