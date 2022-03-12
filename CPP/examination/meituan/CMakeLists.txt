@@ -1,1 +1,10 @@
+add_executable(meituan meituan.cc)
+add_executable(Test1 Test1.cc)
+add_executable(Test2 Test2.cc)
+add_executable(Test3 Test3.cc)
+
 add_executable(meituan1 meituan1.cc)
+add_executable(meituan2 meituan2.cc)
+add_executable(meituan3 meituan3.cc)
+add_executable(meituan4 meituan4.cc)
+add_executable(meituan5 meituan5.cc)

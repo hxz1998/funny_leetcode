@@ -51,7 +51,65 @@ public:
     }
 };
 
+/*int *func1(int num) {
+    return &num; // 返回栈的内存地址不行
+}*/
+
+union example {
+    int a[5];
+    char b;
+    double c;
+};
+
+class Demo {
+    int age;
+    int *aa;
+public:
+    Demo(int a) : age(a) {
+        aa = new int;
+        *aa = age;
+    }
+
+    // 定义了析构函数，然后没有自己进行深拷贝，就会出现问题
+    Demo(const Demo &other) {
+        this->aa = new int;
+        *aa = age;
+    }
+
+    ~Demo() {
+        delete aa;
+    }
+};
+
+class Example {
+    string *ptr;
+public:
+    Example(const string &&str) : ptr(new string(str)) {}
+
+    Example(Example &&e) : ptr(e.ptr) {
+        e.ptr = nullptr;
+    }
+
+    Example &operator=(Example &&e) {
+        delete ptr;
+        ptr = e.ptr;
+        e.ptr = nullptr;
+        return *this;
+    }
+
+    Example operator+(Example &&rhs) {
+        return Example((*ptr) + *(rhs.ptr));
+    }
+};
+
 int main() {
+    Example foo("exam");
+    Example bar(move(foo));
+    bar = bar + move(bar);
+
+    int result = sizeof(example);
+    Demo de(1);
+    Demo d2(de);
     Lizard l1(1, 2);
     Lizard l2(3, 4);
     Animal *a1 = &l1;
@@ -64,6 +122,18 @@ int main() {
 
     array<int, 2> arr;
     int nu = 1;
-    cout << ++++++++++++nu << endl;
+    cout << ++ ++ ++ ++ ++ ++nu << endl;
+
+    int src = 1;
+    int const *nums = &src;
+    // 常量指针，不能修改指针的值
+//    (*nums) = 1;
+
+    int *const cnums = &src;
+    int nn = 2;
+
+    (*cnums) = 2;
+    // 指针常量，不能再重新找一个值去指定
+//    cnums = &nn;
     return 0;
 }
