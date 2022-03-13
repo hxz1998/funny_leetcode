@@ -13,7 +13,7 @@ using namespace std;
  * 负数除以正数   可能溢出，
  * 负数除以负数   可能溢出
  */
-class Solution {
+/*class Solution {
 public:
     int divide(int a, int b) {
         if (a == INT32_MIN && b == -1) return INT32_MAX;
@@ -38,6 +38,29 @@ private:
             a -= tmp;
         }
         return ret;
+    }
+};*/
+
+class Solution {
+public:
+    int divide(int a, int b) {
+        if (a == INT32_MIN && b == -1) return INT32_MAX;
+        int sign = (a < 0 && b > 0) || (a > 0 && b < 0) ? -1 : 1;
+        a = a < 0 ? a : -a;
+        b = b < 0 ? b : -b;
+        unsigned int ans = 0;
+        while (a <= b) {
+            int tmp = b;
+            unsigned int cnt = 1;
+            while (tmp >= 0xc0000000 && a <= tmp + tmp) {
+                tmp += tmp;
+                cnt += cnt;
+            }
+            ans += cnt;
+            a -= tmp;
+        }
+
+        return sign * ans;
     }
 };
 

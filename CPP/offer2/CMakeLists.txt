@@ -1,3 +1,7 @@
 add_executable(Offer2_1 Offer2_1.cc)
 add_executable(Offer2_2 Offer2_2.cc)
 add_executable(Offer2_82 Offer2_82.cc)
+add_executable(Offer2_7 Offer2_7.cc)
+add_executable(Offer2_95 Offer2_95.cc)
+add_executable(Offer2_25 Offer2_25.cc)
+add_executable(Offer2_16 Offer2_16.cc)

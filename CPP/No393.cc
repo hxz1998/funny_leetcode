@@ -7,7 +7,8 @@
 
 using namespace std;
 
-class Solution {
+// 原始方法
+/*class Solution {
 public:
     bool validUtf8(vector<int> &data) {
         int num = 0;
@@ -28,11 +29,43 @@ public:
         }
         return num == 0;
     }
+};*/
+
+class Solution {
+public:
+    bool validUtf8(vector<int> &data) {
+        int n = static_cast<int>(data.size());
+        if (n > 4) return false;
+        for (int idx = 0; idx < n; ++idx) {
+            bool isSingleSign = (data[idx] & (1 << 7)) == 0;
+            if (isSingleSign) {
+                continue;
+            } else {
+                int tmp = data[idx];
+                int cnt = 0;
+                while ((tmp & (1 << 7)) != 0) {
+                    tmp <<= 1;
+                    cnt++;
+                }
+                if (idx == n || cnt > n - idx || cnt == 1) return false;
+                while (--cnt > 0 && idx++ < n) {
+                    if ((data[idx] & (1 << 7)) != (1 << 7)) return false;
+                }
+            }
+        }
+        return true;
+    }
 };
 
 int main() {
     Solution s;
-    vector<int> data = {197, 130, 1};
+    vector<int> data = {240, 162, 138, 147, 145};
+    cout << s.validUtf8(data) << endl;
+    data = {145};
+    cout << s.validUtf8(data) << endl;
+    data = {230, 136, 145};
+    cout << s.validUtf8(data) << endl;
+    data = {197, 130, 1};
     cout << s.validUtf8(data) << endl;
     data = {235, 140, 4};
     cout << s.validUtf8(data) << endl;
