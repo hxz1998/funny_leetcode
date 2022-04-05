@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Solution {
+/*class Solution {
 public:
     int findKthNumber(int n, int k) {
         auto getCount = [](int prefix, int n) {
@@ -28,6 +28,35 @@ public:
             }
         }
         return prefix;
+    }
+};*/
+
+class Solution {
+    long long getSteps(long long curr, long long n) {
+        long long steps = 0, first = curr, last = curr;
+        while (first <= n) {
+            steps += min(last, n) - first + 1;
+            first *= 10;
+            last = first + 9;
+        }
+        return steps;
+    }
+
+public:
+    int findKthNumber(int n, int k) {
+        int curr = 1;
+        k--;
+        while (k > 0) {
+            long long steps = getSteps(curr, n);
+            if (steps <= k) {
+                k -= steps;
+                curr++;
+            } else {
+                curr = curr * 10;
+                k--;
+            }
+        }
+        return curr;
     }
 };
 

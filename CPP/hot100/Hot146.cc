@@ -12,7 +12,7 @@ using namespace std;
 class LRUCache {
 private:
     struct Node {
-        Node *prev{}, *next{};
+        Node *prev, *next;
         int key, val;
 
         Node() = default;
