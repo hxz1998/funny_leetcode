@@ -1,0 +1,5 @@
+add_executable(tencent_1 tencent_1.cc)
+add_executable(tencent_2 tencent_2.cc)
+add_executable(tencent_3 tencent_3.cc)
+add_executable(tencent_4 tencent_4.cc)
+add_executable(tencent_5 tencent_5.cc)

@@ -1,0 +1,3 @@
+add_executable(tencentMusic1 tencentMusic1.cc)
+add_executable(tencentMusic2 tencentMusic2.cc)
+add_executable(tencentMusic3 tencentMusic3.cc)

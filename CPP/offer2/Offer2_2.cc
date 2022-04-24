@@ -28,7 +28,16 @@ public:
 };
 
 int main() {
-
+    cout << __builtin_popcount(10) << endl;
+    auto func = [](int num) {
+        int ret = 0;
+        while (num) {
+            num = (num & (num - 1));
+            ret++;
+        }
+        return ret;
+    };
+    cout << func(10) << endl;
     Solution s;
     cout << s.addBinary("1", "111") << endl;
     cout << s.addBinary("11", "10") << endl;

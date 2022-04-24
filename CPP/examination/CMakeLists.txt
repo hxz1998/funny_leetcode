@@ -1,2 +1,8 @@
 add_subdirectory(meituan/)
 add_subdirectory(netcase/)
+add_subdirectory(huawei/)
+add_subdirectory(tencentMusic/)
+add_subdirectory(bytedance/)
+add_subdirectory(alibaba/)
+add_subdirectory(baidu/)
+add_subdirectory(tencent/)

@@ -24,11 +24,13 @@ add_subdirectory(offer2/)
 #add_subdirectory(hot100/)
 #
 ## 笔试
-#add_subdirectory(examination/)
+add_subdirectory(examination/)
 #
 ## 牛客网
 #add_subdirectory(NOWCODER/)
 #
+
+add_subdirectory(lccup2022/)
 #add_executable(cc main.cc complex_node.hh)
 #add_executable(No1 No1.cc)
 #add_executable(No2 No2.cc)

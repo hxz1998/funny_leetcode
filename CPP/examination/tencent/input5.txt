@@ -1,0 +1,45 @@
+class Solution {
+public:
+    ListNode *solve(vector<ListNode *> &a) {
+        ListNode *ms = nullptr;
+        int ms_val = INT32_MAX;
+        int offset = 0;
+        int n = static_cast<int>(a.size());
+        for (int idx = 0; idx < a.size(); ++idx) {
+            ListNode *item = a[idx];
+            while (item != nullptr) {
+                if (item->val < ms_val) {
+                    ms_val = item->val;
+                    ms = item;
+                    offset = (idx + 1) % n;
+                }
+                item = item->next;
+            }
+        }
+        unordered_set<int> visited;
+        vector<int> ans;
+        while (ms != nullptr) {
+            visited.insert(ms->val);
+            ans.push_back(ms->val);
+            ms = ms->next;
+        }
+        for (int idx = 0; idx < n; ++idx) {
+            int offset_index = (idx + offset) % n;
+            ListNode *item = a[offset_index];
+            while (item != nullptr) {
+                if (visited.find(item->val) == visited.end()) {
+                    visited.insert(item->val);
+                    ans.push_back(item->val);
+                }
+                item = item->next;
+            }
+        }
+        ListNode *dummyHead = new ListNode(1);
+        ListNode *curr = dummyHead;
+        for (int num: ans) {
+            curr->next = new ListNode(num);
+            curr = curr->next;
+        }
+        return dummyHead->next;
+    }
+};
