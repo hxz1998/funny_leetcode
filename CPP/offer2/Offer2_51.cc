@@ -34,24 +34,24 @@ struct TreeNode {
 class Solution {
     int ans = INT32_MIN;
 
-/*    int helper(TreeNode *root) {
-        if (root == nullptr) return 0;
-        else if (root->left == nullptr && root->right == nullptr) {
-            ans = max(ans, root->val);
-            return root->val;
-        } else if (root->left == nullptr) {
-            int right = helper(root->right);
-            ans = max(ans, max(right, max(root->val, root->val + right)));
-            return root->val + (right < 0 ? 0 : right);
-        } else if (root->right == nullptr) {
-            int left = helper(root->left);
-            ans = max(ans, max(left, max(root->val, root->val + left)));
-            return root->val + (left < 0 ? 0 : left);
+/*    int helper(TreeNode *curr) {
+        if (curr == nullptr) return 0;
+        else if (curr->left == nullptr && curr->right == nullptr) {
+            ans = max(ans, curr->val);
+            return curr->val;
+        } else if (curr->left == nullptr) {
+            int right = helper(curr->right);
+            ans = max(ans, max(right, max(curr->val, curr->val + right)));
+            return curr->val + (right < 0 ? 0 : right);
+        } else if (curr->right == nullptr) {
+            int left = helper(curr->left);
+            ans = max(ans, max(left, max(curr->val, curr->val + left)));
+            return curr->val + (left < 0 ? 0 : left);
         } else {
-            int left = helper(root->left);
-            int right = helper(root->right);
-            ans = max(ans, max(left, max(right, root->val + (left < 0 ? 0 : left) + (right < 0 ? 0 : right))));
-            return max((left < 0 ? 0 : 1) + root->val, (right < 0 ? 0 : 1) + root->val);
+            int left = helper(curr->left);
+            int right = helper(curr->right);
+            ans = max(ans, max(left, max(right, curr->val + (left < 0 ? 0 : left) + (right < 0 ? 0 : right))));
+            return max((left < 0 ? 0 : 1) + curr->val, (right < 0 ? 0 : 1) + curr->val);
         }
     }*/
 

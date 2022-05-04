@@ -27,7 +27,7 @@ add_subdirectory(offer2/)
 add_subdirectory(examination/)
 #
 ## 牛客网
-#add_subdirectory(NOWCODER/)
+add_subdirectory(NOWCODER/)
 #
 
 add_subdirectory(lccup2022/)
@@ -855,3 +855,5 @@ add_subdirectory(lccup2022/)
 
 #add_executable(No2024 No2024.cc)
 add_executable(No1606 No1606.cc)
+add_executable(No417 No417.cc)
+add_executable(No1823 No1823.cc)
