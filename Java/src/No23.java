@@ -26,14 +26,15 @@ public class No23 {
 
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) return null;
-        PriorityQueue<ListNode> queue = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
-        for (ListNode node : lists) if (node != null) queue.offer(node);
+        PriorityQueue<ListNode> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
+        for (ListNode listNode : lists) if (listNode != null) pq.add(listNode);
         ListNode dummyHead = new ListNode();
         ListNode curr = dummyHead;
-        while (!queue.isEmpty()) {
-            curr.next = queue.poll();
+        while (!pq.isEmpty()) {
+            ListNode node = pq.poll();
+            curr.next = node;
             curr = curr.next;
-            if (curr.next != null) queue.offer(curr.next);
+            if (node.next != null) pq.add(node.next);
         }
         return dummyHead.next;
     }
